@@ -1,5 +1,5 @@
 
-# ARPG - Desenvolvimento de um Novo Projeto
+# ARPG - Em Desenvolvimento
 
 Bem-vindo ao **ARPG**
 
