@@ -11,7 +11,8 @@ class Game:
         self.screen = pygame.display.set_mode((WIDTH,HEIGHT))
         self.font = pygame.font.Font(FONT,TILESIZE)
         self.running = True
-
+        self.image = pygame.Surface((100,100))
+        self.rect = self.image.get_frect()
         self.states = []
         self.splash_screen = SplashScreen(self)
         self.states.append(self.splash_screen)

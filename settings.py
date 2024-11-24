@@ -1,3 +1,5 @@
+from pygame.math import Vector2 as vec
+
 WIDTH = 400
 HEIGHT = 224
 TILESIZE = 16
