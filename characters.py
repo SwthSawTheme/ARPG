@@ -19,12 +19,26 @@ class NPC(pygame.sprite.Sprite):
         self.fric = -15
     
     def physics(self,dt):
-        pass
+        self.acc.x += self.vel.x * self.fric
+        self.vel.x += self.acc.x * dt
+        self.rect.centerx = self.vel.x * dt * (self.vel.x/2) * dt
 
     def update(self, dt):
-        pass
+        self.physics(dt)
 
 
 class Player(NPC):
     def __init__(self, game, scene, group, pos, name):
         super().__init__(game, scene, group, pos, name)
+
+    def moviment(self):
+        if INPUTS['left']:
+            self.acc.x = -self.force
+        elif INPUTS["right"]:
+            self.acc.x = self.force
+        else:
+            self.acc.x = 0
+
+    def update(self, dt):
+        self.physics(dt)
+        self.moviment()
