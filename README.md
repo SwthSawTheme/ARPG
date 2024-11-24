@@ -21,4 +21,4 @@ Mais detalhes serão adicionados conforme o projeto evolui.
 
 ---
 
-© 2024 - Criado com dedicação para o futuro.
+© 2024 - Saw Them | Todos os direitos reservados
