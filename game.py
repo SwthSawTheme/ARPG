@@ -1,12 +1,14 @@
 import pygame, sys
 from settings import *
+from states import *
 
 class Game:
 
     def __init__(self):
+
         pygame.init()
         self.clock = pygame.time.Clock()
-        self.screen = pygame.display.set_mode(WIDTH,HEIGHT)
+        self.screen = pygame.display.set_mode((WIDTH,HEIGHT))
         self.font = pygame.font.Font(FONT,TILESIZE)
         self.running = True
 
@@ -79,6 +81,13 @@ class Game:
             INPUTS[key] = False
     
     def loop(self):
-        while self.running
-        dt = self.clock.tick() / 1000
-        self.get_inputs()
+        while self.running:
+            dt = self.clock.tick() / 1000
+            self.get_inputs()
+            self.states[-1].updated(dt)
+            self.states[-1].draw(self.screen)
+            pygame.display.update()
+
+if __name__ == "__main__":
+    game = Game()
+    game.loop()
