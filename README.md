@@ -14,11 +14,7 @@ Este projeto está em fase inicial, focado na construção de uma base sólida p
 O repositório contém:
 
 - **Código-fonte:** A fundação para as funcionalidades do projeto.
-- **Recursos Auxiliares:** Arquivos e scripts que apoiam o desenvolvimento.
-- **Planejamento Futuro:** Pistas do que está por vir!
+- **Recursos Auxiliares:** Esse projeto acompanha um mini curso de desenvolvimento
+- **[Creditos](https://www.youtube.com/@mattowen1812)** Toda a lógica e estrutura foi desenvolvida pelo Matt Owen
 
 Mais detalhes serão adicionados conforme o projeto evolui.
-
----
-
-© 2024 - Saw Theme | Todos os direitos reservados
