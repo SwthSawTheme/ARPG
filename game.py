@@ -47,3 +47,38 @@ class Game:
                     INPUTS["up"] = False
                 elif event.key in (pygame.K_DOWN, pygame.K_s):
                     INPUTS["down"] = False
+            
+            if event.type == pygame.MOUSEWHEEL:
+                if event.y == 1:
+                    INPUTS["scroll_up"] = True
+                elif event.y == -1:
+                    INPUTS["scroll_down"] = True
+
+            if event.type == pygame.MOUSEBUTTONDOWN:
+                if event.button == 1:
+                    INPUTS["left_click"] = True
+                elif event.button == 3:
+                    INPUTS["right_click"] = True
+                elif event.button == 4:
+                    INPUTS["scroll_down"] = True
+                elif event.button == 2:
+                    INPUTS["scroll_up"] = True
+            
+            if event.type == pygame.MOUSEBUTTONUP:
+                if event.button == 1:
+                    INPUTS["left_click"] = False
+                elif event.button == 3:
+                    INPUTS["right_click"] = False
+                elif event.button == 4:
+                    INPUTS["scroll_down"] = False
+                elif event.button == 2:
+                    INPUTS["scroll_up"] = False
+
+    def reset_inputs(self):
+        for key in INPUTS:
+            INPUTS[key] = False
+    
+    def loop(self):
+        while self.running
+        dt = self.clock.tick() / 1000
+        self.get_inputs()
