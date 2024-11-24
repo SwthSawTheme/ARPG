@@ -1,5 +1,6 @@
 import pygame, sys
 from settings import *
+from game import *
 
 class State:
 
@@ -10,7 +11,7 @@ class State:
     def enter_state(self):
         if len(self.game.states) < 1:
             self.prev_state = self.game.states[-1]
-        self.game.states.appen(self)
+        self.game.states.append(self)
     
     def exit_state(self):
         self.game.states.pop()
@@ -24,10 +25,25 @@ class State:
 class SplashScreen(State):
 
     def __init__(self,game):
-        State.__init__(self,game)
+        State.__init__(self, game)
     
     def updated(self, dt):
-        pass
+        if INPUTS["space"]:
+            Scene(self.game).enter_state()
+            self.game.reset_inputs()
 
     def draw(self,screen):
-        pass
+        screen.fill(COLORS["blue"])
+
+class Scene(State):
+
+    def __init__(self,game):
+        State.__init__(self, game)
+    
+    def updated(self, dt):
+        if INPUTS["space"]:
+            SplashScreen(self.game).enter_state()
+            self.game.reset_inputs()
+
+    def draw(self,screen):
+        screen.fill(COLORS["red"])
