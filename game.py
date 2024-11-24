@@ -16,6 +16,11 @@ class Game:
         self.splash_screen = SplashScreen(self)
         self.states.append(self.splash_screen)
     
+    def render_text(self, text, colour, font, pos, centralised=True):
+        surf = font.render(str(text),False, colour)
+        rect = surf.get_rect(center = pos) if centralised else surf.get_rect(topleft = pos)
+        self.screen.blit(surf,rect)
+
     def get_inputs(self):
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
