@@ -34,7 +34,7 @@ class SplashScreen(State):
 
     def draw(self,screen):
         screen.fill(COLORS["blue"])
-        self.game.render_text("Splash screen press space", COLORS["white"], self.game.font, (WIDTH/2, HEIGHT/2), centralised=True)
+        self.game.render_text("Splash screen press space", COLORS["white"], self.game.font, (WIDTH/2, HEIGHT/2))
         
 
 class Scene(State):
@@ -49,3 +49,4 @@ class Scene(State):
 
     def draw(self,screen):
         screen.fill(COLORS["red"])
+        self.game.render_text("Welcome to the game Scene!", COLORS["black"], self.game.font, (WIDTH/2, HEIGHT/2))
