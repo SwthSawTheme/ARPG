@@ -15,4 +15,4 @@ INPUTS = {"escape": False,
           "scroll_down": False,
           }
 
-COLORS = {"black":(0,0,0), "white":(255,255,255), "red":(255,0,0),"green":(0,255,0),"blue":(0,0,255)}
+COLORS = {"black":(0,0,0), "white":(255,255,255), "red":(200,100,100),"green":(100,200,100),"blue":(100,100,200)}

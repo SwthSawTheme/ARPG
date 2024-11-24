@@ -49,4 +49,4 @@ class Scene(State):
 
     def draw(self,screen):
         screen.fill(COLORS["red"])
-        self.game.render_text("Welcome to the game Scene!", COLORS["black"], self.game.font, (WIDTH/2, HEIGHT/2))
+        
