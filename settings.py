@@ -1,7 +1,7 @@
 WIDTH = 400
 HEIGHT = 224
 TILESIZE = 16
-FONT = "assets/Homespun.ttf"
+FONT = "assets/homespun.ttf"
 
 INPUTS = {"escape": False,
           "space": False,
