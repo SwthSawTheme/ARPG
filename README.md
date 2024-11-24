@@ -1,5 +1,5 @@
 
-# ARPG - Em Desenvolvimento
+# ARPG - *Em desenvolvimento*
 
 Bem-vindo ao **ARPG**
 
@@ -21,4 +21,4 @@ Mais detalhes serão adicionados conforme o projeto evolui.
 
 ---
 
-© 2024 - Saw Them | Todos os direitos reservados
+© 2024 - Saw Theme | Todos os direitos reservados
