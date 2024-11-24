@@ -21,7 +21,7 @@ class NPC(pygame.sprite.Sprite):
     def physics(self,dt):
         self.acc.x += self.vel.x * self.fric
         self.vel.x += self.acc.x * dt
-        self.rect.centerx = self.vel.x * dt * (self.vel.x/2) * dt
+        self.rect.centerx += self.vel.x * dt + (self.vel.x/2) * dt
 
     def update(self, dt):
         self.physics(dt)
